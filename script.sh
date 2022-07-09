@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e 
 apt update
-apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg
+apt -y install software-properties-common curl apt-transport-https ca-certificates gnupg expect
 LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
 curl -sS https://downloads.mariadb.com/MariaDB/mariadb_repo_setup | bash
 apt update
