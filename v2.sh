@@ -3,6 +3,8 @@
 getDocker() {
 sudo apt install docker.io -y
 usermod -ag docker $USER
+echo "reloading env vars"
+exec su - -c $0 $USER
 }
 sudo docker images || getDocker
 cd 
